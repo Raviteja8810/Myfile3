@@ -1,0 +1,18 @@
+FROM ubuntu:18.04
+LABLE maintainer="rtejad8@gmail.com"
+
+RUN apt-get update && apt-get install -y apache2
+EXPOSE 80
+
+ENTRYPOINT ["/usr/sbin/apachect1"]
+CMD ["-D","FOREGROUND"]
+COPY index.html dockerfile/index.html
+VOLUME dockerfile/
+
+
+
+
+
+
+
+
